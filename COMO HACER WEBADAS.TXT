@@ -1,0 +1,9 @@
+1.Abrir terminal
+
+2.Cambiar de powershell a Command prompt(tambien funciona desde cmd metiendote en la carpeta correcta)
+
+3.IMPORTANTE CADA VEZ QUE EMPIEZE EL DIA,INICIAR EL ENTORNO CON entorno25.bat (si tal cual el nombre del entorno)
+
+4.Luego haces   javac Nombre_Archivo.java
+
+5.java Nombre_Archivo
