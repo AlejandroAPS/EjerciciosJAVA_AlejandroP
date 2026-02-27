@@ -1,3 +1,4 @@
+package Ejercicio3;
 public class TiposDatos{
     //Inicio de la clase main
     public static void main(String args[]) {
