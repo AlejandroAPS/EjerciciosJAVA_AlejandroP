@@ -1,0 +1,13 @@
+public class Principal {
+    public static void main(String[] args) {
+        Motor miMotor = new Motor(100, 1);
+        Coche miCoche = new Coche("5568FJK", "Ford", "Fiesta", 100, "Diesel");
+        
+        System.out.println(miCoche.estado());
+        
+        miCoche = null;
+        
+        System.out.println("El objeto motor sigue activo con caballos "
+                + miMotor.getCaballos());
+    }
+}

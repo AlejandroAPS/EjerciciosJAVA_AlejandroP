@@ -74,6 +74,15 @@ public class Cuenta {
 		this.saldo -= cantidad;
 		return this.saldo;
 	}
+	@Override
+	public String toString() {
+	    return "Cuenta{" +
+	            "cliente=" + cliente +
+	            ", iban='" + iban + '\'' +
+	            ", saldo=" + saldo +
+	            '}';
+	}
+	
 	
 	
 }
