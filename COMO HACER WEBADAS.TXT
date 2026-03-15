@@ -7,3 +7,5 @@
 4.Luego haces   javac Nombre_Archivo.java
 
 5.java Nombre_Archivo
+
+6. Olvidate de esto el visual es una vrga para hacer JAVA lol
