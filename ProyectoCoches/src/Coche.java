@@ -4,7 +4,8 @@ public class Coche {
     private String marca;
     private String modelo;
     private int velocidad;
-    
+    public static String informa = "Tenemos coches de todas las marcas";
+    public static int contadorCoches = 0;
     
     
     public Coche(String matricula, String marca, String modelo) {
@@ -13,7 +14,24 @@ public class Coche {
         this.marca = marca;
         this.modelo = modelo;
         this.velocidad = 0;
+        contadorCoches ++;
     }
+	public Coche(String marca, String modelo) {
+		this.matricula = "Sin matricular";
+		this.marca = marca;
+		this.modelo = modelo;
+		this.velocidad = 0;
+		contadorCoches++;
+	}
+	public Coche() {
+		this.matricula = "Sin matricular";
+		this.marca = "Renault";
+		this.modelo = "25";
+		this.velocidad = 0;
+		contadorCoches++;
+	}
+    
+    
     public String getMatricula() {
         return matricula;
     }
@@ -48,4 +66,8 @@ public class Coche {
     public void frenar(int cuanto) {
         this.velocidad -= cuanto;
     }
+    
+    public static String informarSobreCoches() {
+    	return informa + "\n" + "Coches construidos: " + contadorCoches;
+    	}
 }

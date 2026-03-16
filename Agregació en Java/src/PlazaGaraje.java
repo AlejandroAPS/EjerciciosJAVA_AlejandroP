@@ -23,4 +23,13 @@ public class PlazaGaraje {
 		this.coche = null;
 	}
 	
+	@Override
+	public String toString() {
+	    if (this.coche == null) {
+	        return "Plaza " + numero + " (planta " + planta + ") está vacía.";
+	    } else {
+	        return "Plaza " + numero + " (planta " + planta + ") ocupada por coche con matrícula: " + coche.getMatricula();
+	    }
+	}
+	
 }

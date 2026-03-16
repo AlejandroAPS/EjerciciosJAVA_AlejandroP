@@ -8,6 +8,11 @@ public class Main {
         plaza1.aparca(miCoche);
         System.out.println(plaza1);  // Ahora muestra el coche aparcado
         plaza1.desaparca();
-        System.out.println(plaza1);  // De nuevo está vacía
+        System.out.println(plaza1); 	// De nuevo está vacía
+        
+        miCoche.acelerar(10);
+        System.out.println(miCoche.toString());
+        miCoche.frenar(5);
+        System.out.println(miCoche.toString());
     }
-}
+}	

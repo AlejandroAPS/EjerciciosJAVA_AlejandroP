@@ -27,6 +27,11 @@ public class Coche {
 		this.matricula = matricula;
 	}
 
+	
+	public String getMatricula() {
+		return matricula;
+	}
+	
 	public String getMarca() {
 		return marca;
 	}
@@ -58,6 +63,15 @@ public class Coche {
 	public void setVelocidad(int velocidad) {
 		this.velocidad = velocidad;
 	}
+	
+	@Override
+	public String toString() {
+	        return "Matricula:  " + this.matricula
+	        		+ " Marca: " + this.marca 
+	        		+ " Modelo: " + this.modelo
+	        		+ " Color: " + this.color
+	        		+ " Velocidad: " + this.velocidad;
+	    }
 
 	
     

@@ -6,6 +6,11 @@ public class UsoCoche {
 		Scanner lector = new Scanner (System.in);
 		String opcion = "";
 		
+		System.out.println(Coche.informa);
+		System.out.println("Coche contruidos: "+Coche.contadorCoches);
+		System.out.println(Math.PI); //Ejemplo de variable estática
+		
+		
 		do {
 			System.out.println("1. Acelerar");
 			System.out.println("2. Frenar");
