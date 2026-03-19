@@ -1,4 +1,6 @@
+
 package escuela.notas;
+
 public class Calificacion {
 	private String asignatura;
 	private float nota;
@@ -21,6 +23,8 @@ public class Calificacion {
 		this.nota = 0;
 	}
 	
+	
+	//GET Y SET =================================================
 	public String getAsignatura() {
 		return asignatura;
 	}
@@ -33,7 +37,7 @@ public class Calificacion {
 	public void setNota(float nota) {
 		this.nota = nota;
 	}
-	
+	//===========================================================
 	public String notaTexto() {
 		if (this.nota < 3) return "Muy Deficiente";
 		else if (this.nota < 5) return "Insuficiente";
@@ -56,6 +60,6 @@ public class Calificacion {
 
 	@Override
 	public String toString() {
-		return "Calificacion [asignatura=" + asignatura + ", nota=" + nota + "]";
+		return getAsignatura() + ": " + getNota();
 	}
 }

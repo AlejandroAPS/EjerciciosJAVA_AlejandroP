@@ -28,15 +28,15 @@ public class Principal {
 			switch(opcion) { //metes el codigo correspondiente despues del syso en cada opcion 
 			case "1":
 				System.out.println("Has seleccionado ver butacas libres");
-				System.out.println(teatro.soymingitoLibre());
+				System.out.println(teatro.verLibres());
 				break;
 			case "2":
 				System.out.println("Has seleccionado ver butacas ocupadas");
-				System.out.println(teatro.soymingitoOcupada());
+				System.out.println(teatro.verOcupadas());
 				break;
 			case "3":
 				System.out.println("Has seleccionado ver todas las butacas");
-				System.out.println(teatro.soymingito());
+				System.out.println(teatro.verbutacas());
 				break;
 			case "4":
 				System.out.println("Has seleccionado reservar butaca");

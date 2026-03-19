@@ -54,7 +54,7 @@ public class Teatro {
 	//==========================================================
 	
 	// TO STRINGS DEPENDE DE DISTINTINTAS SITUACIONES
-	public String soymingito() {
+	public String verbutacas() {
 		String resultado = "Direccion: " + direccion + "\n";
 	    resultado += "Butacas:\n";
 
@@ -74,7 +74,7 @@ public class Teatro {
 	}
 	
 	
-	public String soymingitoLibre() {
+	public String verLibres() {
 	    String resultado = "Direccion: " + direccion + "\n";
 	    resultado += "Butacas:\n";
 	    
@@ -83,8 +83,6 @@ public class Teatro {
 
 	            if (butacas[i][j] == null) {
 	                resultado += "[No ocupada] ";
-	            } else {
-	               //no hace nada lol 
 	            }
 	        }
 	        resultado += "\n"; // salto de línea por fila
@@ -93,7 +91,7 @@ public class Teatro {
 	    return resultado;
 	}
 	
-	public String soymingitoOcupada() {
+	public String verOcupadas()) {
 	    String resultado = "Direccion: " + direccion + "\n";
 	    resultado += "Butacas:\n";
 	    
