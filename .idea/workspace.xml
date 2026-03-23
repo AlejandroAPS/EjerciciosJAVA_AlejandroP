@@ -2,13 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdc68f8b-2d46-481d-a6d0-ef02b47df167" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Ejercicios Strings/Ejercicio 2/src/Ejercicio2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ejercicios Strings/Ejercicio 3/src/Ejercicio3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ejercicios Strings/Ejercicio 4/src/Ejercicio4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/EjerciciosJAVA_AlejandroP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EjerciciosJAVA_AlejandroP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoCalificaciones/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoCalificaciones/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,17 +33,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alejandro Pérez/Desktop/FP GETAFE/Programacion/JAVA/EjerciciosJAVA_AlejandroP&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Ejercicio3.executor": "Run",
+    "Application.Principal.executor": "Run",
+    "Application.main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Alejandro Pérez/Desktop/FP GETAFE/Programacion/JAVA/EjerciciosJAVA_AlejandroP",
+    "onboarding.tips.debug.path": "C:/Users/Alejandro Pérez/Desktop/FP GETAFE/Programacion/JAVA/EjerciciosJAVA_AlejandroP/Ejercicios Strings/src/Main.java"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alejandro Pérez\Desktop\FP GETAFE\Programacion\JAVA\EjerciciosJAVA_AlejandroP\Ejercicios Strings\Ejercicio 1" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Ejercicio3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ejercicio3" />
+      <module name="EjerciciosJAVA_AlejandroP" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Ejercicio3" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
