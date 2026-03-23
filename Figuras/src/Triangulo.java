@@ -1,0 +1,21 @@
+public class Triangulo extends Figura {
+	private float base;
+	private float altura;
+	
+	public Triangulo(int coordenadaX, int coordenadaY, 
+			float base, float altura) {
+		super(coordenadaX, coordenadaY);
+		this.base = base;
+		this.altura = altura;
+	}
+
+	@Override
+	public String toString() {
+		return "Triangulo [base=" + base + ", altura=" + altura + ", toString()=" + super.toString() + "]";
+	}
+
+	@Override
+	public double area() {
+		return base*altura/2;
+	}
+}
