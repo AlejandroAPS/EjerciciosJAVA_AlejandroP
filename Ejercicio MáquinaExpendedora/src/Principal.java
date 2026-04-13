@@ -16,7 +16,7 @@ public class Principal {
 	}
 	
 	
-	public void introduccionMonedas(double precio) {
+	public static void introduccionMonedas(double precio) {
 		Scanner lector = new Scanner(System.in);
 		int opcion = 0;
 		double introducido = 0; 
@@ -118,33 +118,42 @@ public class Principal {
         //Aqui arriba podria poner un codigo con un simple if para asegurarme que el bobo
         //del usuario ponga un int y no un double pero no me apetece
         opcion = lector.nextInt();
+       double precio = 0;
        switch(opcion) { //Esta seccion esta por supuesto sin acabar
        	case 1:
        		System.out.println("Has elegido Agua mineral");
-       		double precio = 1.00;
+       		precio = 1.00;
        		introduccionMonedas(precio);
-       		
-       		
        	break;
        	
        	case 2:
        		System.out.println("Coca-Cola");
+       		precio = 1.20;
+       		introduccionMonedas(precio);
        	break;
        	
        	case 3:
        		System.out.println("Aquarius Naranja");
+       		precio = 1.20;
+       		introduccionMonedas(precio);
        	break;
        	
        	case 4:
        		System.out.println("Aquarius Limón");
+       		precio = 1.20;
+       		introduccionMonedas(precio);
        	break;
        	
        	case 5:
        		System.out.println("Fanta Naranja");
+       		precio = 1.25;
+       		introduccionMonedas(precio);
        	break;
        	
        	case 6:
        		System.out.println("Fanta Limón");
+       		precio = 1.25;
+       		introduccionMonedas(precio);
        	break;
        	
        	case 0:
