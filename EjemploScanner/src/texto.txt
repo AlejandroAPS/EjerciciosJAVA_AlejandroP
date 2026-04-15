@@ -1,0 +1,4 @@
+Peras;3.5;25
+Tomates;1.4;25
+Uvas;2.5;25
+Niggas;5.6;2
