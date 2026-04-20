@@ -1,53 +1,104 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+	
+
+
 
 public class Principal {
+	
+	public static void anadirEmpleado() {
+		Scanner lector = new Scanner(System.in);
+		System.out.println("====Añadir empleado====");
+   		System.out.println("DNI del empleado");
+   		String nif = lector.nextLine();
+   		System.out.println("Nombre:");
+   		String nombreE = lector.nextLine();
+   		System.out.println("Edad:");
+   		int edadE = lector.nextInt();
+   		
+   		Empleado e = new Empleado(nif,nombreE,edadE);
+   		empleados.add(e);
+   		System.out.println("Empleado añadido correctamente");
+   		lector.close();
+	}
+	
+	public static void nProyecto() {
+		Scanner lector = new Scanner(System.in);
+		System.out.println("=======Nuevo Proyecto======");
+		System.out.println("Nombre:");
+		String nombre = lector.nextLine();
+		
+		Proyecto p =new Proyecto(nombre);
+		if(empleados.isEmpty()) {
+			System.out.println("No hay empleados disponibles para asignar");
+		}else {
+			System.out.println("\n Lista de empleados ");
+			
+			  for (int i = 0; i < empleados.size(); i++) {
+				  System.out.println(i + ". " + empleados.get(i));
+			  }
+			  
+			  int opcion;
+			  do{
+				  System.out.print("Selecciona empleado (-1 para terminar): ");
+		            opcion = lector.nextInt();
 
+		            if (opcion >= 0 && opcion < empleados.size()) {
+		                p.agregarEmpleado(empleados.get(opcion));
+		                System.out.println("Empleado añadido al proyecto.");
+		            } else if (opcion != -1) {
+		                System.out.println("Índice no válido.");
+		            }
+			  }while (opcion != -1);  
+		}
+		proyectos.add(p);
+		System.out.println("Proyecto creado correctamente");
+		lector.close();
+	}
+	
+	public static void anadirTareas() {
+		System.out.println("Escoge un Proyecto:");
+		
+	}
+	
+	static ArrayList<Empleado> empleados = new ArrayList<>();
+	static ArrayList<Proyecto> proyectos = new ArrayList<>();
+	
 	public static void main(String[] args) {
 		Scanner lector = new Scanner(System.in);
-        int opcion = 0;
+        int opcion;	
         
-        
+        do {
         System.out.println("==== Gestor Proyectos ====\r\n"
         					+ "1. Añadir empleado\r\n"
         					+ "2. Crear nuevo proyecto\r\n"
-        					+ "3. Asignar proyecto a empleado\r\n"
-        					+ "4. Añadir tareas a proyecto\r\n"
-        					+ "5. Eliminar tareas de un proyecto\r\n"
-        					+ "6. Eliminar proyecto\r\n"
-        					+ "7. Despedir empleados\r\n"
+        					+ "3. Añadir tareas a proyecto\r\n"
+        					+ "4. Eliminar tareas de un proyecto\r\n"
+        					+ "5. Eliminar proyecto\r\n"
+        					+ "6. Despedir empleados\r\n"
         					+ "0. Cerrar gestor");
         opcion = lector.nextInt();
        switch(opcion) { 
        	case 1:
-       		System.out.println("====Añadir empleado====");
-       		System.out.println("DNI del empleado");
-       		String nif = lector.nextLine();
-       		System.out.println("Nombre del empleado");
-       		String NombreE = lector.nextLine();
-       		System.out.println("Edad del empleado");
-       		int edadE = lector.nextInt();
-       		break;
+       		anadirEmpleado();
+       	break;
        	case 2:
-       		System.out.println("Crear nuevo proyecto");
+       		nProyecto();
        	break;
        	
        	case 3:
-       		System.out.println("Asignar protecto a empleado");
-       	break;
-       	
-       	case 4:
        		System.out.println("Añadir tareas a proyecto");
        	break;
        	
-       	case 5:
+       	case 4:
        		System.out.println("Eliminar tareas de proyecto");
        	break;
        	
-       	case 6:
+       	case 5:
        		System.out.println("Eliminar proyecto");
        	break;
        	
-       	case 7:
+       	case 6:
        		System.out.println("Despedir empleados");
        	break;
        	
@@ -60,6 +111,7 @@ public class Principal {
        	break;
        }
 
-	}
+	}while(opcion !=0);
 
+}
 }

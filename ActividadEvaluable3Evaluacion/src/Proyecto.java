@@ -2,8 +2,7 @@ import java.util.ArrayList;
 
 public class Proyecto {
 	
-	public String nombre;
-	public int numEmpleados;
+	private String nombre;
 	private ArrayList<Empleado> empleados;
 	private ArrayList<Tarea> tareas;
 	
@@ -12,22 +11,21 @@ public class Proyecto {
 		return empleados;
 	}
 	public void setEmpleados(ArrayList<Empleado> empleados) {
-		empleados = empleados;
+		this.empleados = empleados;
 	}
 	public ArrayList<Tarea> getTareas() {
 		return tareas;
 	}
 	public void setTareas(ArrayList<Tarea> tareas) {
-		tareas = tareas;
+		this.tareas = tareas;
 	}
 	//======================================================================
 	
-	public Proyecto(String nombre, int nºEmpleados, ArrayList<Empleado> empleados, ArrayList<Tarea> tareas) {
+	public Proyecto(String nombre) {
 		super();
 		this.nombre = nombre;
-		numEmpleados = nºEmpleados;
-		empleados = empleados;
-		tareas = tareas;
+		this.empleados = new ArrayList<>();
+		this.tareas = new ArrayList<>();
 	}
 	
 	  // Métodos para añadir
@@ -35,8 +33,16 @@ public class Proyecto {
         empleados.add(empleado);
     }
 
-    public void agregarProfesor(Tarea tarea) {
+    public void agregarTarea(Tarea tarea) {
         tareas.add(tarea);
     }
+	@Override
+	public String toString() {
+		return "Proyecto [nombre=" + nombre +
+				", empleados=" + empleados + 
+				", tareas=" + tareas + "]";
+	}
 	
+    //TE QUEDASTE A MEDIAS DE HACER EL TOSTRING TERMINA Y CONTINUA FUNCION 3
+    
 }

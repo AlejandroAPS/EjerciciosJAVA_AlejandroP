@@ -1,15 +1,14 @@
-
 public class Empleado {
 	private String nif;
 	private String nombre;
 	private int edad;
 	
 	//================ GETTERS AND SETTERS ======================
-	public String getifF() {
+	public String getNif() {
 		return this.nif;
 	}
-	public void setNif(String nIF) {
-		this.nif = nIF;
+	public void setNif(String nif) {
+		this.nif = nif;
 	}
 	public String getNombre() {
 		return this.nombre;
@@ -25,11 +24,20 @@ public class Empleado {
 	}
 	//===========================================================
 	
-	public Empleado(String nIF, String nombre, int edad) {
+	public Empleado(String nif, String nombre, int edad) {
 		super();
 		this.nif = nif;
 		this.nombre = nombre;
 		this.edad = edad;
 	}
+	
+	@Override
+	public String toString() {
+		return "[" + nif + "]"
+				+ nombre + 
+				"," + edad + " años\r\n";
+	}
+	
+	
 	
 }
