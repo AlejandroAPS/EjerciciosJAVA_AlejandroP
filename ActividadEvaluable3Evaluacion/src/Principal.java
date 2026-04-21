@@ -57,8 +57,44 @@ public class Principal {
 	}
 	
 	public static void anadirTareas() {
+		Scanner lector = new Scanner(System.in);
 		System.out.println("Escoge un Proyecto:");
-		
+		if(proyectos.isEmpty()) {
+			System.out.println("No hay ningún proyecto creado al que asignar tareas");
+		}else {
+			System.out.println("\n Lista de proyectos ");
+			
+			  for (int i = 0; i < proyectos.size(); i++) {
+				  System.out.println(i + ". " + proyectos.get(i));
+			}
+		}
+		int opcion;
+	            opcion = lector.nextInt();
+
+	            if (opcion >= 0 && opcion < proyectos.size()) {
+	                Proyecto proyectoE = proyectos.get(opcion);
+	                System.out.println("Proyecto " + proyectoE.getNombre() + " elegido.");
+	            } else if (opcion <= -1) {
+	                System.out.println("Índice no válido.");
+	            }
+	    String continuar;
+	   do {
+		   System.out.println("====Añadir Tarea====");
+	   		System.out.println("Nombre tarea");
+	   		String nombre = lector.nextLine();
+	   		System.out.println("Duracion Horas");
+	   		float horas = lector.nextFloat();
+	   		System.out.println("Nº Personal necesario");
+	   		int personal = lector.nextInt();
+	   		lector.nextLine(); //limpiar lo que habia en el lector
+	   		Tarea nTarea = new Tarea(nombre,horas,personal);
+	   		
+	   		proyectoE.agregarTarea(nTarea);
+
+	        System.out.print("¿Añadir otra tarea? (s/n): ");
+	        continuar = lector.nextLine();
+	   		
+	   }while (continuar != "n");
 	}
 	
 	static ArrayList<Empleado> empleados = new ArrayList<>();
@@ -87,7 +123,7 @@ public class Principal {
        	break;
        	
        	case 3:
-       		System.out.println("Añadir tareas a proyecto");
+       		anadirTareas();
        	break;
        	
        	case 4:

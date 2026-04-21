@@ -8,7 +8,7 @@ public class Tarea {
 	public Tarea(String descripcion, float horasDuracion, int personalNecesario) {
 		super();
 		this.descripcion = descripcion;
-		HorasDuracion = horasDuracion;
+		this.HorasDuracion = horasDuracion;
 		this.personalNecesario = personalNecesario;
 	}
 	

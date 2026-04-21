@@ -19,7 +19,15 @@ public class Proyecto {
 	public void setTareas(ArrayList<Tarea> tareas) {
 		this.tareas = tareas;
 	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
 	//======================================================================
+	
 	
 	public Proyecto(String nombre) {
 		super();
@@ -38,11 +46,10 @@ public class Proyecto {
     }
 	@Override
 	public String toString() {
-		return "Proyecto [nombre=" + nombre +
-				", empleados=" + empleados + 
-				", tareas=" + tareas + "]";
+		return "==" + nombre + "=="+
+				"Empleados:\r\n" + empleados + 
+				" tareas" + tareas + "";
 	}
 	
-    //TE QUEDASTE A MEDIAS DE HACER EL TOSTRING TERMINA Y CONTINUA FUNCION 3
     
 }
