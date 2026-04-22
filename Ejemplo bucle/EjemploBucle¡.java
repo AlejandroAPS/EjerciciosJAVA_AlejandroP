@@ -1,6 +1,6 @@
-package Ejemplo bucle;
 
-public class EjemploBucle¡ {
+
+public class EjemploBucle {
     
     public static void main(string[] args){
         int contador = 0;

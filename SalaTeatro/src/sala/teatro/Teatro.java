@@ -91,7 +91,7 @@ public class Teatro {
 	    return resultado;
 	}
 	
-	public String verOcupadas()) {
+	public String verOcupadas() {
 	    String resultado = "Direccion: " + direccion + "\n";
 	    resultado += "Butacas:\n";
 	    

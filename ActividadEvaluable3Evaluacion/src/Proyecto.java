@@ -35,6 +35,14 @@ public class Proyecto {
 		this.empleados = new ArrayList<>();
 		this.tareas = new ArrayList<>();
 	}
+
+
+	public Proyecto (){
+		super();
+		this.nombre = "Proyecto";
+		this.empleados = new ArrayList<>();
+		this.tareas = new ArrayList<>();
+	}
 	
 	  // Métodos para añadir
     public void agregarEmpleado(Empleado empleado) {

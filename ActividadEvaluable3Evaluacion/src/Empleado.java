@@ -30,6 +30,8 @@ public class Empleado {
 		this.nombre = nombre;
 		this.edad = edad;
 	}
+
+	
 	
 	@Override
 	public String toString() {

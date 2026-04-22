@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdc68f8b-2d46-481d-a6d0-ef02b47df167" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Ejercicios Strings/Ejercicio 2/src/Ejercicio2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ejercicios Strings/Ejercicio 3/src/Ejercicio3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ejercicios Strings/Ejercicio 4/src/Ejercicio4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/EjerciciosJAVA_AlejandroP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EjerciciosJAVA_AlejandroP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ActividadEvaluable3Evaluacion/src/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/ActividadEvaluable3Evaluacion/src/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ActividadEvaluable3Evaluacion/src/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/ActividadEvaluable3Evaluacion/src/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ActividadEvaluable3Evaluacion/src/Proyecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ActividadEvaluable3Evaluacion/src/Proyecto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejemplo bucle/EjemploBucle¡.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ejemplo bucle/EjemploBucle¡.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio MáquinaExpendedora/src/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio MáquinaExpendedora/src/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Paquetes/src/Gato.java" beforeDir="false" afterPath="$PROJECT_DIR$/Paquetes/src/Gato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SalaTeatro/src/sala/teatro/Teatro.java" beforeDir="false" afterPath="$PROJECT_DIR$/SalaTeatro/src/sala/teatro/Teatro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EjerciciosJAVA_AlejandroP/Ejercicio1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EjerciciosJAVA_AlejandroP/Ejercicio2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EjerciciosJAVA_AlejandroP/Ejercicio3.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +51,8 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Alejandro Pérez/Desktop/FP GETAFE/Programacion/JAVA/EjerciciosJAVA_AlejandroP",
-    "onboarding.tips.debug.path": "C:/Users/Alejandro Pérez/Desktop/FP GETAFE/Programacion/JAVA/EjerciciosJAVA_AlejandroP/Ejercicios Strings/src/Main.java"
+    "onboarding.tips.debug.path": "C:/Users/Alejandro Pérez/Desktop/FP GETAFE/Programacion/JAVA/EjerciciosJAVA_AlejandroP/Ejercicios Strings/src/Main.java",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
