@@ -6,15 +6,15 @@
 
 	public class Principal {
 		
-		public static void anadirEmpleado() {
-			Scanner lector = new Scanner(System.in);
+		public static void anadirEmpleado(Scanner lector) {
 			System.out.println("====Añadir empleado====");
 			System.out.println("DNI del empleado");
 			String nif = lector.nextLine();
 			System.out.println("Nombre:");
+			int edadE = lector.nextInt();
 			String nombreE = lector.nextLine();
 			try{
-				int edadE = lector.nextInt();
+				
 				System.out.println("Edad:");
 			}catch(java.util.InputMismatchException e){
 				System.out.println("Porfavor introduzca un número");
@@ -27,8 +27,7 @@
 			
 		}
 		
-		public static void nProyecto() {
-			Scanner lector = new Scanner(System.in);
+		public static void nProyecto(Scanner lector) {
 			System.out.println("=======Nuevo Proyecto======");
 			System.out.println("Nombre:");
 			String nombre = lector.nextLine();
@@ -61,8 +60,7 @@
 			
 		}
 		
-		public static void anadirTareas() {
-			Scanner lector = new Scanner(System.in);
+		public static void anadirTareas(Scanner lector) {
 			System.out.println("Escoge un Proyecto:");
 			if(proyectos.isEmpty()) {
 				System.out.println("No hay ningún proyecto creado al que asignar tareas");
@@ -76,10 +74,10 @@
 			int opcion;
 					opcion = lector.nextInt();
 
-					Proyecto proyectoE = null;
+					Proyecto proyectoE;
 
 					if (opcion >= 0 && opcion < proyectos.size()) {
-						Proyecto proyectoE = proyectos.get(opcion);
+						proyectoE = proyectos.get(opcion);
 						System.out.println("Proyecto " + proyectoE.getNombre() + " elegido.");
 					} else {
 						System.out.println("Índice no válido.");
@@ -97,7 +95,7 @@
 				int personal = lector.nextInt();
 				lector.nextLine(); //limpiar lo que habia en el lector
 				Tarea nTarea = new Tarea(nombre,horas,personal);
-
+				
 				proyectoE.agregarTarea(nTarea);
 	
 				System.out.print("¿Añadir otra tarea? (s/n): ");
@@ -122,14 +120,14 @@
 			opcion = lector.nextInt();
 		switch(opcion) { 
 			case 1:
-				anadirEmpleado();
+				anadirEmpleado(lector);
 			break;
 			case 2:
-				nProyecto();
+				nProyecto(lector);
 			break;
 			
 			case 3:
-				anadirTareas();
+				anadirTareas(lector);
 			break;
 			
 			case 0:
