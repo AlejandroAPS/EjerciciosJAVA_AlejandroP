@@ -6,7 +6,7 @@ public class Principal {
 	//array list que guarda TODOS los empleados que cree el usuario y TODOS los proyectos
 	static ArrayList<Empleado> empleados = new ArrayList<>();
 	static ArrayList<Proyecto> proyectos = new ArrayList<>();
-		
+		//crear empleados en el arraylist empleados
 		public static void anadirEmpleado(Scanner lector) {
 			System.out.println("====Añadir empleado====");
 			System.out.println("DNI del empleado");
@@ -33,7 +33,8 @@ public class Principal {
 				System.out.println(e1.getMessage());
 			}
 		}
-		
+
+		//crear proyectos
 		public static void nProyecto(Scanner lector) {
 			System.out.println("=======Nuevo Proyecto======");
 			System.out.println("Nombre:");
@@ -52,11 +53,17 @@ public class Principal {
 				//se crea opcion antes del bucle para que no de fallo
 				int opcion;
 				do{
-					System.out.print("Selecciona empleado (-1 para terminar): ");
-						opcion = lector.nextInt();
-						//limpiar el buffer
-						lector.nextLine();
-						
+
+						try { //try catch para ver si el usuario pulsa un número o no
+							System.out.print("Selecciona empleado (-1 para terminar): ");
+							opcion = lector.nextInt();
+							//limpiar el buffer
+							lector.nextLine();
+						}catch(java.util.InputMismatchException e){
+							System.out.println("Por favor pulse un número válido");
+							return;
+						}
+
 						if (opcion >= 0 && opcion < empleados.size()) {
 							Empleado seleccionado = empleados.get(opcion);
 						//No deberias de poder agregar dos veces al mismo empleado a un proyecto 
@@ -66,34 +73,39 @@ public class Principal {
 						    }
 						    //agrega el empleado con el numero elegido por el usuario
 							p.agregarEmpleado(empleados.get(opcion));
-							System.out.println("Empleado " + seleccionado.getNombre() + "añadido al proyecto.");
+							System.out.println("Empleado " + seleccionado.getNombre() + " añadido al proyecto.");
 						} else if (opcion != -1) {
 							System.out.println("Índice no válido.");
 						}
-				}while (opcion != -1);  
+				}while (opcion != -1);
+			//Se mantiene en bucle pudiendo seleccionar multiples empleados hasta que user pulas -1
 			}
-			proyectos.add(p);
+			proyectos.add(p); //agrega el proyecto al array list de proyectos
 			System.out.println("Proyecto creado correctamente");
 			
 		}
-		
+
+		//crear tareas en los proyectos ya existentes
 		public static void anadirTareas(Scanner lector) {
 			System.out.println("Escoge un Proyecto:");
+			//si no hay ningún proyecto creado devuelve al usuario para atras
 			if(proyectos.isEmpty()) {
 				System.out.println("No hay ningún proyecto creado al que asignar tareas");
 				return;
-			}else {
+			}else {//si SI hay proyectos se muestran pues
 				System.out.println("\n Lista de proyectos ");
-				
+				//con este bucle va proyecto por proyecto mostrandolo usando el toString del proyecto
 				for (int i = 0; i < proyectos.size(); i++) {
 					System.out.println(i + ". " + proyectos.get(i));
 				}
 			}
-			int opcion;
+					//variabls opcion para que el usuario vaya eligiendo que proyecto quiere
+					int opcion;
 					opcion = lector.nextInt();
-					lector.nextLine(); 
+					lector.nextLine();
 					Proyecto proyectoE = null;
-
+					//si es elegible y esta dentro del rango de los proyectos existentes continua y si no devuelve a menu principal
+					//(podria haber usado un try catch la verdad)
 					if (opcion >= 0 && opcion < proyectos.size()) {
 						proyectoE = proyectos.get(opcion);
 						System.out.println("Proyecto " + proyectoE.getNombre() + " elegido.");
@@ -102,13 +114,14 @@ public class Principal {
 						return;
 					}
 			String continuar = "s";
-		do {	
+		//Con este bucle vas añadiendo tareas hasta que el usuario quiera parar
+		do {
 			System.out.println("====Añadir Tarea====");
 				System.out.println("Nombre tarea");
 				String nombre = lector.nextLine();
-				System.out.println("Duracion Horas");
+				System.out.println("Duración Horas");
 				float horas;
-				try{
+				try{//try para que el usuairo ponga un numero y no una letra
 					horas = lector.nextFloat();
 				}catch(InputMismatchException e){
 					System.out.println("Introduzca un número valido porfavor");
@@ -119,62 +132,64 @@ public class Principal {
 				lector.nextLine();
 				System.out.println("Nº Personal necesario");
 				int personal = lector.nextInt();
-				lector.nextLine(); //limpiar lo que habia en el lector
-				
+				lector.nextLine(); //limpiar lo que había en el lector (buffer)
+
+				//si intentas agregar personal por encima del permitido repites el bucle de crear tarea
 				if (personal > Tarea.MAX_PERSONAL) {
 				    System.out.println("No se puede asignar tanto personal");
 				    continue;
 				}
+				//se agrega la tarea al tener ya todos los datos
 				Tarea nTarea = new Tarea(nombre,horas,personal);
 				proyectoE.agregarTarea(nTarea);
-	
+				//se pregunta si quieres añadir otra tarea
 				System.out.print("¿Añadir otra tarea? (s/n): ");
 				continuar = lector.nextLine();
-				
+			//si pulsa n termina el bucle
 		}while (!continuar.equals("n"));
 	}
 		
-		
+		//marcar tareas como completadas o incompletas
 		public static void terminarTarea(Scanner lector) {
 
 		    System.out.println("Escoge un Proyecto:");
-
+			//si no hay proyectos para fuera
 		    if (proyectos.isEmpty()) {
 		        System.out.println("No hay ningún proyecto creado al que asignar tareas");
 		        return;
 		    }
 
 		    System.out.println("\n Lista de proyectos ");
-
+			//muestra todos los proyectos
 		    for (int i = 0; i < proyectos.size(); i++) {
 		        System.out.println(i + ". " + proyectos.get(i));
 		    }
 
 		    int opcion = lector.nextInt();
 		    lector.nextLine();
-
+			//toda esta sección es para que puedas elegir un proyecto de entre las opciones
 		    Proyecto proyectoE;
 
 		    if (opcion >= 0 && opcion < proyectos.size()) {
 		        proyectoE = proyectos.get(opcion);
 		        System.out.println("Proyecto " + proyectoE.getNombre() + " elegido.");
-		    } else {
+		    } else {//si hay 4 por ejemplo y escoges el 6 acabas aquí por portarte mal
 		        System.out.println("Índice no válido.");
 		        return;
 		    }
 
+			//si no tiene tareas dicho proyecto pues no vas a cambiar nada asi que para fuera
 		    if (proyectoE.getTareas().isEmpty()) {
 		        System.out.println("No hay ninguna tarea en este proyecto");
 		        return;
 		    }
 
+			//inicializa seguir
 		    String seguir;
 
 		    do {
-
-		        
 		        System.out.println("\n==== LISTA DE TAREAS ====");
-
+				//con esto devuelve la lista de todas las tareas de dicho proyecto y muestra si estan completadas o no
 		        for (int i = 0; i < proyectoE.getTareas().size(); i++) {
 		            Tarea t = proyectoE.getTareas().get(i);
 
@@ -184,31 +199,32 @@ public class Principal {
 		            );
 		        }
 
+				//permite elegir una de ellas aqui
 		        System.out.println("\nElige una tarea:");
 		        int tareaIndex = lector.nextInt();
 		        lector.nextLine();
-
+				//if que revisa que escogiste una tarea válida
 		        if (tareaIndex >= 0 && tareaIndex < proyectoE.getTareas().size()) {
-
 		            Tarea t = proyectoE.getTareas().get(tareaIndex);
-
-		            
 		            t.setTerminada(!t.isTerminada());
-
+					//muestra al usuario que realmente toco algo
+					//mostrar feedback al usuario de que lo que toca importa y cambian las cosas se siente bien
 		            System.out.println("Cambiaste el estado de: " + t.getDescripcion());
 
 		        } else {
 		            System.out.println("Índice de tarea no válido.");
 		        }
 
+				//te pregunta si quieres seguir cambiando tareas
 		        System.out.println("\n¿Quieres seguir cambiando tareas? (s/n)");
 		        seguir = lector.nextLine();
-
-		    } while (seguir.equalsIgnoreCase("s"));
+			//si s pues sigues cambiando tareas
+		    } while (seguir.equals("s"));
 		}
-		
+		//vale este es simple pero relevante
+		//simplemente reusa código ya hecho para que el usuario pueda ver los proyectos de forma cómoda
 		public static void verProyectos() {
-			if(proyectos.isEmpty()) {
+			if(proyectos.isEmpty()) {//si no hay ningun proyecto te saca fuera
 				System.out.println("No hay ningún proyecto creado");
 				return;
 			}else {

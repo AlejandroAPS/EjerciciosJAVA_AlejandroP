@@ -33,15 +33,10 @@ public class Empleado {
 		this.edad = edad;
 	}
 
-	
-	
 	@Override
 	public String toString() {
 		return "[" + nif + "]"
 				+ nombre + 
 				"," + edad + " años\r\n";
 	}
-	
-	
-	
 }

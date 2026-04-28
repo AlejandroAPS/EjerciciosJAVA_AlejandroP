@@ -13,8 +13,6 @@ public class Tarea {
 		this.HorasDuracion = horasDuracion;
 		this.personalNecesario = personalNecesario;
 	}
-
-
 	@Override
 	public String toString() {
 	    return "[" + descripcion + "] " +
@@ -22,7 +20,6 @@ public class Tarea {
 	            personalNecesario + " personas, " +
 	            (terminada ? "Terminada\r\n" : "Pendiente\r\n");
 	}
-
 
 //==================GETTER AND SETTERS=================================
 	public boolean isTerminada() {
@@ -36,21 +33,6 @@ public class Tarea {
 
 	public String getDescripcion() {
 		return descripcion;
-	}
-
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
-
-
-	public float getHorasDuracion() {
-		return HorasDuracion;
-	}
-
-
-	public void setHorasDuracion(float horasDuracion) {
-		HorasDuracion = horasDuracion;
 	}
 	
 //=========================================================================
