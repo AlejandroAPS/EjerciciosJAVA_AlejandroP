@@ -24,8 +24,10 @@ public class Empleado {
 	}
 	//===========================================================
 	
-	public Empleado(String nif, String nombre, int edad) {
-		super();
+	public Empleado(String nif, String nombre, int edad) throws EdadInvalidaException {
+		if (edad<0) {
+			throw new EdadInvalidaException("Edad no válida");
+		}
 		this.nif = nif;
 		this.nombre = nombre;
 		this.edad = edad;

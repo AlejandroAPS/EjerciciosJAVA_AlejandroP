@@ -26,6 +26,7 @@ public class Proyecto {
 		this.nombre = nombre;
 	}
 	
+	
 	//======================================================================
 	
 	
@@ -54,10 +55,9 @@ public class Proyecto {
     }
 	@Override
 	public String toString() {
-		return "==" + nombre + "=="+
+		return "==" + nombre + "==\r\n"+
 				"Empleados:\r\n" + empleados + 
-				" tareas" + tareas + "";
+				"\r\n Tareas:" + tareas + "\r\n";
 	}
 	
-    
 }

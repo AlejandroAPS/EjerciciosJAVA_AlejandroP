@@ -1,9 +1,9 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.ResultSet;
-	
+
 public class Principal {
 	public static void main(String[] args) {
 		
@@ -33,22 +33,53 @@ public class Principal {
 		// Paso 3: Interactuar con la BD (todavía pendiente)
 		Statement motorSQL;
 		try {
-			motorSQL = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			motorSQL = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 			System.out.println("Creado Statement con éxito");
 			// Interactuar con la tabla CLIENTE.
 			ResultSet rs = motorSQL.executeQuery("SELECT * FROM cliente");
-			//Ahora el cursor apunta a Before start
-			rs.next(); //Ahora el cursor apunta a la fila 1.
-			System.out.println(rs.getString("contacto") +
-					"(" + rs.getString("cia") + ")");
-			rs.next(); //Ahora el cursor apunta a la fila 2.
-			System.out.println(rs.getString("contacto") +
-					"(" + rs.getString("cia") + ")");
-			rs.next(); //Ahora el cursor apunta a la fila 3.
-			System.out.println(rs.getString("contacto") +
-					"(" + rs.getString("cia") + ")");
+			// Ahora el cursor apunta a Before start
+			rs.next(); // Ahora el cursor apunta a la fila 1.
+			System.out.println(rs.getString("cia") + 
+				" (" + rs.getString("contacto") + ")");
+			
+			rs.updateString("contacto", "Maria Antoñeta");
+			rs.updateRow();
+			rs.next(); // Ahora el cursor apunta a la fila 2.
+			System.out.println(rs.getString("cia") + 
+				" (" + rs.getString("contacto") + ")");
+			rs.previous();
+			System.out.println(rs.getString("cia") + 
+					" (" + rs.getString("contacto") + ")");
+			
+			// Va a la fila 5.
+			rs.absolute(5);
+			System.out.println(rs.getString("cia") + 
+					" (" + rs.getString("contacto") + ")");
+			
+			// Avanza 3 posiciones
+			rs.relative(3);
+			System.out.println(rs.getString("cia") + 
+					" (" + rs.getString("contacto") + ")");
+			
+			rs.first();
+			System.out.println(rs.getString("cia") + 
+					" (" + rs.getString("contacto") + ")");
+			
+			rs.last();
+			System.out.println(rs.getString("cia") + 
+					" (" + rs.getString("contacto") + ")");
+			
+			rs.moveToInsertRow(); 
+			rs.updateString("idcliente", "HUERT");
+			rs.updateString("cia", "La huerta murciana"); 
+			rs.updateString("contacto", "Amelia González"); 
+			rs.updateString("cargo", "Representante de ventas"); 
+			rs.updateString("pais", "España"); 
+			rs.insertRow(); 
+
+			
 		} catch (SQLException e) {
-			System.out.println("Error creando Statement");
+			System.out.println("Error interactuando con la BD");
 			System.out.println(e.getMessage());
 		}
 		
