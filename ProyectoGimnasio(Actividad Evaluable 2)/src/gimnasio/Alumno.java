@@ -31,4 +31,5 @@ public class Alumno extends Usuario {
     public String toString() {
         return super.toString() + "\nFecha alta: " + fechaAlta;
     }
+    
 }

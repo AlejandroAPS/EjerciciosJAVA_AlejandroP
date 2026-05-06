@@ -21,7 +21,7 @@ public class Reserva {
     }
 
     // Getters y Setters
-    public int getId() {
+    public int getIdReserva() {
         return id;
     }
 

@@ -4,9 +4,9 @@ import java.time.LocalDate;
 import java.util.Map;
 
 public interface IGimnasio {
-
-    boolean addReserva(Reserva reserva); //hay que hacer todas estas funciones ya sabes,funcionales
-
+	
+    boolean addReserva(Reserva reserva); 
+    
     boolean cancelarReserva(int idReserva);
 
     Map<Integer, Reserva> getAllReservas();
